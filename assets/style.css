@@ -32,12 +32,21 @@
     color: rgb(42, 42, 105);
     font-size: 48px;  
     font-family: 'Shift', sans-serif;
-    font-weight: bold;
+   
   }
-.text-green
+.daytext
 {
   color :rgb(42, 42, 105);
+  font-weight: bold;
 }
+.container{
+ padding-top: 0px;
+ padding-left: 20px;
+ margin-top: 0px;
+ margin-left: 10px;
+}
+
+
 @media only screen and (max-width: 480px)  {
     .jumbotron h1 {
         font-size: 28px;  
