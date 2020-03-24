@@ -1,12 +1,40 @@
 const headerDate = $("#current-date");
-const dateTiming = $("#current-time");
 const container = $(".container");
 let currentHour;
 let currentMinute;
-getDateTimeInfo();
-getTimeInfo();
 
-//get date using  MomentJS time request before document is fully loaded
+let hourArr = ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"];
+//schedule data is an object with 2 elements, a date and an array of time:event pairs
+let dateKey;
+let todaysSchedule = {
+    date : "",
+    00 : "",
+    01 : "",
+    02 : "",
+    03 : "",
+    04 : "",
+    05 : "",
+    06 : "",
+    07 : "",
+    08 : "",
+    09 : "",
+    10 : "",
+    11 : "",
+    12 : "",
+    13 : "",
+    14 : "",
+    15 : "",
+    16 : "",
+    17 : "",
+    18 : "",
+    19 : "",
+    20 : "",
+    21 : "",
+    22 : "",
+    23 : "",
+    24 : ""
+};
+//start the MomentJS time request before document is fully loaded
 function getDateTimeInfo(){
     let date = moment().format('dddd, MMM Do');
     headerDate.text(date);
@@ -14,15 +42,11 @@ function getDateTimeInfo(){
     currentMinute = parseInt(moment().format('mm'));
     dateKey = moment().format('YYYYMMDD');
 }
-// get times am pm with moment js before document is fully loaded
-function getTimeInfo(){
-  const time= moment().format('HH:mm:ss');
-  var formatted = moment(time, "HH:mm:ss").format("LT");
-  dateTiming.text(formatted);
-}
-// declearing an hour array from 12am to 11pm
-let hourArr = ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"];
-let dateKey;
-
+getDateTimeInfo();
+// get times am pm with moment js from moment
+const time= moment().format('HH:mm:ss');
+var formatted = moment(time, "HH:mm:ss").format("LT");
+let $dateTiming = $("#current-time")
+$dateTiming.text(formatted);
 
 
