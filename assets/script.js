@@ -1,27 +1,26 @@
-$(document).ready(function() {
-    var hour_Text = 9;
-    var min_text = ":00am";
-    var evenStorage = [];
-    var eventStorage_name ="Event Storage";
-      // test flag
-  const test = false;
-  // get times from moment
-  const now = moment().format('MMMM Do YYYY ');
-  const now1 = moment().format('HH:mm');
-  let $dateTiming = $("#current-time")
-  $dateTiming.text(now1);
-  // commented out for test in non-standard hours
-  let nowHour24 = moment().format('H');
-  let nowHour12 = moment().format('h');
+const headerDate = $("#current-date");
+const dateTiming = $("#current-time");
+const container = $(".container");
+let currentHour;
+let currentMinute;
+getDateTimeInfo();
+getTimeInfo();
 
-  // set times for tesitng after hours
-  if (test) {
-    nowHour24 = 13;
-    nowHour12 = 1;
-  }
-  //const now = moment().format("HH:mm");
-  let $dateHeading = $('#current-date');
- // let $dateHeading = $("#current-time")
-  $dateHeading.text(now);
-  
-});
+//get date using  MomentJS time request before document is fully loaded
+function getDateTimeInfo(){
+    let date = moment().format('dddd, MMM Do');
+    headerDate.text(date);
+    currentHour = moment().format('H');
+    currentMinute = parseInt(moment().format('mm'));
+    dateKey = moment().format('YYYYMMDD');
+}
+// get times am pm with moment js before document is fully loaded
+function getTimeInfo(){
+  const time= moment().format('HH:mm:ss');
+  var formatted = moment(time, "HH:mm:ss").format("LT");
+  dateTiming.text(formatted);
+}
+
+
+
+

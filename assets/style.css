@@ -1,66 +1,67 @@
 .bg{
-    background:url("../assets/images/back.jpg");
-    background-position: 35%;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background:url("../assets/images/back.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #wrapper{
-    width: 70%;
-    margin: 5px auto;  
-    border-radius: 6px;
-    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
-    box-sizing: border-box;
-    padding: 0 0 20px;
-    overflow: hidden;
-    border: 1px solid rgb(49, 46, 46);
-    background-color:   rgb(248, 243, 236);
-  }
+  width: 70%;
+  margin: 5px auto;  
+  border-radius: 6px;
+  box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  padding: 0 0 20px;
+  overflow: hidden;
+  border: 1px solid rgb(49, 46, 46);
+  background-color:   rgb(248, 243, 236);
+}
 .jumbotron {
-    margin-bottom: 0px;
-    background-color: rgb(42, 42, 105);
-    color: white;
-    text-shadow: black 0.1em 0.1em 0.1em;
-    max-height: 320px; 
+margin-top: 5px;
+  margin-bottom: 0px;
+  background-color: rgb(42, 42, 105);
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.1em;
+  box-shadow: 0px 1px 6px rgba(0,0,0,0.5);
+  max-height: 320px; 
 }
 .headtext {
-    color: rgb(153, 2, 2);
-    font-size: 28px;  
-    font-family: 'Shift', sans-serif;
-    font-weight: bold;
-  }
-  .jumbotron h1 {
-    color: rgb(42, 42, 105);
-    font-size: 48px;  
-    font-family: 'Shift', sans-serif;
-   
-  }
-.daytext
-{
-  color :rgb(42, 42, 105);
+  color: rgb(153, 2, 2);
+  font-size: 28px;  
+  font-family: 'Shift', sans-serif;
   font-weight: bold;
 }
-.container{
- padding-top: 0px;
- padding-left: 20px;
- margin-top: 0px;
- margin-left: 10px;
+.jumbotron h1 {
+  color: rgb(42, 42, 105);
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+ 
 }
+.daytext
+{
+color :rgb(42, 42, 105);
+font-weight: bold;
+}
+.container{
+padding-top: 0px;
+padding-left: 20px;
+margin-top: 0px;
+margin-left: 10px;
 
+}
 
 @media only screen and (max-width: 480px)  {
-    .jumbotron h1 {
-        font-size: 28px;  
-      }
-      #wrapper{
-        width: 100%;
-      }
+  .jumbotron h1 {
+      font-size: 28px;  
+    }
+    #wrapper{
+      width: 100%;
+    }
 }
 @media only screen and (man-device-width : 768px) {
-    .jumbotron h1 {
-        font-size: 38px;  
-      }
-      #wrapper{
-        width: 90%;
-      }
+  .jumbotron h1 {
+      font-size: 38px;  
+    }
+    #wrapper{
+      width: 90%;
+    }
 }
- 
