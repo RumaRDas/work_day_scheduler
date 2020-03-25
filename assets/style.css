@@ -1,11 +1,11 @@
 .bg{
   background:url("../assets/images/back.jpg");
-
+  background-position:  100% ;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #wrapper{
-  width: 80%;
+  width: 70%;
   margin: 5px auto;  
   border-radius: 6px;
   box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
@@ -123,20 +123,23 @@ margin-left: 10px;
     #wrapper{
       width: 100%;
     }
+    .headtext {
+      font-size: 0px;  
+    }
     .saveBtn {
       width: 15%;
 }
 .eventarea{
   width: 68%;
 }
-.hour {      width: 17%;
+.hour {   width: 17%;
 }
 }
-@media only screen and (man-device-width : 768px) {
+@media only screen and (max-device-width : 768px) {
   .jumbotron h1 {
-      font-size: 38px;  
+      font-size: 28px;  
     }
     #wrapper{
-      width: 90%;
+      width: 100%;
     }
 }
