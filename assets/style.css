@@ -10,36 +10,37 @@
   border-radius: 6px;
   box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
   box-sizing: border-box;
-  padding: 20px 10px 20px 10px;
+  padding: 10px 10px 20px 10px;
   overflow: hidden;
   border: 1px solid rgb(49, 46, 46);
   background-color:   rgb(248, 243, 236);
 }
 .jumbotron {
-margin-top: 5px;
+  margin-top: 5px;
   margin-bottom: 0px;
   background-color: rgb(42, 42, 105);
-  color: white;
-  text-shadow: black 0.1em 0.1em 0.1em;
   box-shadow: 0px 1px 6px rgba(0,0,0,0.5);
   max-height: 320px; 
 }
 .headtext {
   color: rgb(153, 2, 2);
   font-size: 28px;  
-  font-family: 'Shift', sans-serif;
+  font-family: 'Alfa Slab One';
   font-weight: bold;
+  margin-top: 0px;
 }
 .jumbotron h1 {
   color: rgb(42, 42, 105);
-  font-size: 48px;  
-  font-family: 'Shift', sans-serif;
+  font-size: 38px;  
+  font-family: 'Alfa Slab One';
+  text-shadow: black 0.1em 0.1em 0.1em;
  
 }
 .daytext
 {
 color :rgb(39, 39, 68);
 font-weight: bold;
+font-family: 'Alfa Slab One';
 }
 .container{
 padding-top: 0px;
@@ -49,7 +50,8 @@ margin-left: 10px;
 }
 .eventarea{
   white-space: pre-wrap;
-  width: 80%;
+  width: 84%;
+  padding-left: 10px;
 }
 
 .time-block{
@@ -74,7 +76,7 @@ margin-left: 10px;
   border-left: 1px solid black;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  width: 10%;
+  width:8%;
 }
 
 .past {
@@ -105,7 +107,7 @@ margin-left: 10px;
   color: rgb(235, 232, 232);
   padding-right:10px;
   text-align: center;
-  width: 10%;
+  width: 8%;
 
  
 }
@@ -121,7 +123,14 @@ margin-left: 10px;
     #wrapper{
       width: 100%;
     }
- 
+    .saveBtn {
+      width: 15%;
+}
+.eventarea{
+  width: 68%;
+}
+.hour {      width: 17%;
+}
 }
 @media only screen and (man-device-width : 768px) {
   .jumbotron h1 {
