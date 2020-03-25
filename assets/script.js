@@ -60,6 +60,47 @@ function getDayEvents(date){
     return(todayTime[hour]);
 }
 //This will be called on page load and will populate any saved info.
-$(document).ready(function() {
+$(document).ready(function() { 
+   //function to populate the page with time blocks for 5AM to 12AM
+  function loadTime(){
+   for (let i = 7; i < 18; i++) {
+      let nextRow = $("<div>");
+      let nextColumn;
+      nextRow.addClass("row");
+      for (let k = 0; k < 3; k++){
+        switch (k){               
+          case 0:
+              nextColumn = $("<div>");
+              nextColumn.addClass("col-1 hour");
+              nextColumn.text(hourArry[i]);
+              break;
+              case 1:
+                nextColumn = $("<textarea>");
+                nextColumn.text(getHourEvent(i));
+                if (i < currentHour){
+                    nextColumn.addClass("col-10 details past");
+                }
+                else if (i == currentHour){
+                    nextColumn.addClass("col-10  details present");
+                }
+                else{
+                    nextColumn.addClass("col-10  details future");
+                }
+                break;
+            case 2:
+                nextColumn = $("<div>");
+                nextColumn.addClass("col-1 saveBtn text-center");
+                nextColumn.attr("name", hourArry[i]);
+                nextColumn.html("<i class='far fa-save mt-4'>");
+                break;
+        }
+        nextRow.append(nextColumn);
+            }
+            container.append(nextRow);      
+           }
+          }
+      
+          getDayEvents(dateKey);
+          loadTime();
 });
 }
