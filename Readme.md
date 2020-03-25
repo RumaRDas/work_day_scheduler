@@ -1,5 +1,5 @@
 # Work Day Scheduler
-## View This Page [ ]
+
 # jquery
 ## Work Day Scheduler is awebsite that is having a day calender  with current Date and time on top  and userrs can save event according to  time.The page ues feature by dynamically updated HTML and CSS powered by JavaScript code and jqueryize site and for date and time uses moment js
 
