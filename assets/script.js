@@ -2,7 +2,6 @@ const headerDate = $("#current-date");
 const container = $(".container");
 let currentHour;
 let currentMinute;
-getDateInfo();
 //declearing hour array
 let hourArry = ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"];
 //schedule data is an object with 2 elements, a date and an array of time:event pairs
@@ -43,7 +42,7 @@ function getDateInfo(){
     currentMinute = parseInt(moment().format('mm'));
     dateKey = moment().format('YYYYMMDD');
 }
-
+getDateInfo();
 // get times am pm with moment js from moment
 const time= moment().format('HH:mm:ss');
 var formatted = moment(time, "HH:mm:ss").format("LT");
@@ -59,6 +58,8 @@ function getDayEvents(date){
 
   function getHourEvent(hour){
     return(todayTime[hour]);
-
 }
+//This will be called on page load and will populate any saved info.
+$(document).ready(function() {
+});
 }
