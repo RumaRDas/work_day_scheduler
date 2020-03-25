@@ -75,26 +75,29 @@ $(document).ready(function() {
                 switch (k){               
                     case 0:
                         nextColumn = $("<div>");
-                        nextColumn.addClass("col-1 hour");
+                        nextColumn.addClass("hour");
+                        nextColumn.attr("id","timeid");
                         nextColumn.text(hourArry[i]);
                         break;
                     //this is the description column which will take input and have dynamic style depending on current hour
                     case 1:
                         nextColumn = $("<textarea>");
+                        nextColumn.attr("id","eventid");
                         nextColumn.text(getHourEvent(i));
                         if (i < currentHour){
-                            nextColumn.addClass("col-10 description past");
+                            nextColumn.addClass(" eventarea past");
                         }
                         else if (i == currentHour){
-                            nextColumn.addClass("col-10 description present");
+                            nextColumn.addClass("eventarea present");
                         }
                         else{
-                            nextColumn.addClass("col-10 description future");
+                            nextColumn.addClass("eventarea future");
                         }
                         break;
                     case 2:
                         nextColumn = $("<div>");
-                        nextColumn.addClass("col-1 saveBtn text-center");
+                        nextColumn.addClass(" saveBtn");
+                        nextColumn.attr("id","saveid");
                         nextColumn.attr("name", hourArry[i]);
                         nextColumn.html("<i class='far fa-save mt-4'>");
                         break;
